@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Feng - Copywriter & UI/UX Designer</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/interactive.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <div class="logo">
+                <div class="logo-shape"></div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <nav class="menu-nav">
+                <a href="#" class="menu-link active" data-page="hello">Hello</a>
+                <a href="#" class="menu-link" data-page="work">Work</a>
+                <a href="#" class="menu-link" data-page="about">About</a>
+            </nav>
+            <div class="menu-footer">
+                <p>Vancouver, British Columbia</p>
+                <a href="mailto:emilyweiting@gmail.com" class="contact-link">emilyweiting@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Page -->
+<!-- Work Page -->
+<div class="page" id="work-page">
+    <div class="page-header">
+        <h2>Work</h2>
+        <p class="page-subtitle">Selected projects and case studies</p>
+    </div>
+    
+    <div class="work-grid">
+        <!-- Case Study 1 -->
+        <div class="work-item">
+            <div class="work-header">
+                <h3>Jazzdor Festival Case Study</h3>
+                <span class="work-type">Branding</span>
+                <span class="work-year">2022</span>
+            </div>
+            <p class="work-description">
+                A comprehensive 2-week redesign of the Jazzdor Festival's branding and visual identity, focused on enhancing user experience and creating a cohesive brand presence that captures the festival's vibrant musical spirit.
+            </p>
+            <div class="work-tags">
+                <span class="tag">User Research</span>
+                <span class="tag">Wireframing</span>
+                <span class="tag">Branding</span>
+                <span class="tag">Mock-ups</span>
+            </div>
+            <div class="work-images">
+                <div class="image-large">
+                    <img src="img/jazzdor-header.png" alt="E-commerce redesign main interface" class="case-study-image">
+                </div>
+                <div class="image-row">
+                    <img src="img/banner.png" alt="Mobile checkout flow" class="case-study-image">
+                    <img src="img/guitar-pick.png" alt="Product discovery page" class="case-study-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="work-item">
+            <div class="work-header">
+                <h3>About Here Youtube Channel</h3>
+                <span class="work-type">Content Strategy</span>
+                <span class="work-year">2025</span>
+            </div>
+            <p class="work-description">
+                A strategic 3-month collaboration with About Here, a YouTube channel dedicated to urban exploration and city education. 
+                Throughout this process I was involved in designing persona posters and conducting ethnographic research to support content that inspires 
+                curiosity about urban spaces and to help people "fall in love with their city."
+            </p>
+            <div class="work-tags">
+                <span class="tag">Personas</span>
+                <span class="tag">Content Strategy</span>
+                <span class="tag">Ethnography</span>
+                <span class="tag">User Testing</span>
+            </div>
+            <div class="work-images">
+                <div class="image-large">
+                    <img src="img/about-header.png" alt="Healthcare app dashboard" class="case-study-image">
+                </div>
+                <div class="image-row">
+                    <img src="img/edward.png" alt="Appointment booking flow" class="case-study-image">
+                    <img src="img/ethnography.png" alt="Medical records interface" class="case-study-image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="work-item">
+            <div class="work-header">
+                <h3>Arcana Journal</h3>
+                <span class="work-type">Mobile App</span>
+                <span class="work-year">2025</span>
+            </div>
+            <p class="work-description">
+                Developed Arcana Journal, an innovative mood-tracking app that transforms emotional wellness into a journey of self-discovery through tarot cards and reflection. 
+                The project combined gamification elements with mindful mood tracking to create an engaging user experience.
+            </p>
+            <div class="work-tags">
+                <span class="tag">Weather API</span>
+                <span class="tag">User Interface</span>
+                <span class="tag">App Development</span>
+                <span class="tag">Visual Assets</span>
+                <span class="tag">Gamification</span>
+            </div>
+            <div class="work-images">
+                <div class="image-large">
+                    <img src="img/arcana.png" alt="Financial dashboard overview" class="case-study-image">
+                </div>
+                <div class="image-row">
+                    <img src="img/layout.png" alt="Revenue tracking charts" class="case-study-image">
+                    <img src="img/assets.png" alt="Expense categorization interface" class="case-study-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hello Page -->
+        <div class="page active" id="hello-page">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    I'm Emily Feng, a copywriter and 
+                    <span class="highlight">UI/UX designer</span>.
+                    I believe in the power of  
+                    <span class="highlight">words and design</span>, 
+                    working together to tell compelling stories 
+                    and solving real problems.
+                </h1>
+                
+                <div class="skills-tags">
+                    <span class="skill-tag">Copywriting</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Brand Strategy</span>
+                    <span class="skill-tag">Content Design</span>
+                </div>
+                
+                <div class="location">
+                    <p>Based in Vancouver, British Columbia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about-page">
+            <div class="page-header">
+                <h2>About</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        "It's important to think about the interconnectedness between designers and thinkers, instead of trying to find a space you can occupy yourself."
+                    </p>
+                    
+                    <p>
+                        I'm Emily, a copywriter and UI/UX designer with over 3 years of experience based in Vancouver. 
+                        Currently at studying at <span class="highlight">SFU</span>, majoring in Design and Interactions with specializations in copywriting, graphic design, UI/UX design, and content strategy. 
+                        
+                    </p>
+                    
+                    <p>
+                        My approach combines strategic thinking with empathetic design. I believe that great copy and thoughtful interfaces should feel invisible – they should simply help people accomplish their goals without friction or confusion.
+                    </p>
+
+                    
+                    <p>
+                        In my free time, I enjoy exploring reading and drawing. I enjoy learning about open-source design systems.
+                    </p>
+                </div>
+                
+                <div class="experience-section">
+                    <h3 class="section-title">Experience</h3>
+                    
+                    <div class="experience-item expanded">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h4>About Here Youtube</h4>
+                                <span class="role">Copywriter</span>
+                                <span class="period">Jan - Mar 2025</span>
+                            </div>
+                            <button class="expand-btn">×</button>
+                        </div>
+                        <div class="experience-details">
+                            <p>Collaborated with the About Here Youtube Channel and performed a case study with them for four weeks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h4>Arbutus Club</h4>
+                                <span class="role">Receptionist</span>
+                                <span class="period">2023-2025</span>
+                            </div>
+                            <button class="expand-btn">+</button>
+                        </div>
+                        <div class="experience-details">
+                            <p>Worked as a part-time receptionist at the Arbutus Club.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h4>Environment Club Eric Hamber</h4>
+                                <span class="role">Junior Copywriter</span>
+                                <span class="period">2019-2021</span>
+                            </div>
+                            <button class="expand-btn">+</button>
+                        </div>
+                        <div class="experience-details">
+                            <p>Crafted brand voice and messaging for startups and established brands. Specialized in sustainable fashion and B2B technology companies, creating everything from taglines to comprehensive brand guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Menu toggle functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const menuLinks = document.querySelectorAll('.menu-link');
+        const pages = document.querySelectorAll('.page');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            body.style.overflow = menuOverlay.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Page navigation
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPage = e.target.getAttribute('data-page');
+                
+                // Update active states
+                menuLinks.forEach(l => l.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                // Show target page
+                pages.forEach(page => page.classList.remove('active'));
+                document.getElementById(`${targetPage}-page`).classList.add('active');
+                
+                // Close menu
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+        
+        // Experience item expansion
+        const experienceItems = document.querySelectorAll('.experience-item');
+        
+        experienceItems.forEach(item => {
+            const header = item.querySelector('.experience-header');
+            const expandBtn = item.querySelector('.expand-btn');
+            
+            header.addEventListener('click', () => {
+                const isExpanded = item.classList.contains('expanded');
+                
+                // Close all other items
+                experienceItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('expanded');
+                        otherItem.querySelector('.expand-btn').textContent = '+';
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('expanded');
+                expandBtn.textContent = isExpanded ? '+' : '×';
+            });
+        });
+        
+        // Close menu when clicking outside
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuOverlay.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>

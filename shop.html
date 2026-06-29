@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>sippy studio website</title>
+
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/layout.css" rel="stylesheet">
+        <link href="css/interactive.css" rel="stylesheet">
+        <link href="css/misc.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu,shopping_cart" />
+
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar"> <!--need to add ALT text-->
+                <div class="nav-brand">
+                    <a href="index.html" class="logo-link">sippy studio</a>
+                </div>
+                <!-- Hamburger menu toggle (works without JS using CSS) -->
+                 <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+                 <label for="nav-toggle" class="hamburger-label">
+                    <span class="material-symbols-outlined">menu</span>
+                </label>
+                <div class="nav-menu" id="menu">
+                    <a href="about.html">ABOUT</a>
+                    <a href="shop.html">SHOP</a> <!--Disable this page-->
+                    <a href="made.html">MADE by Sippy</a> <!--Disable this page-->
+                    <a href="#">SEARCH</a> <!--Disable this page-->
+                    <a href="#">LOG IN</a> <!--Disable this page-->
+                    <a href="checkout.html" class="cart-icon">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                    <!--needs to be updated for focus and hover states. 
+                    and size of icon needs to be bigger too-->
+                </a>
+            </div>
+        </nav>
+    </header>
+    </body>
+</html>

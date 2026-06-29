@@ -1,0 +1,89 @@
+/*THIS PLACE IS FOR SMALL, MISC. STYLING*/
+
+/*space maker*/
+.spacing {
+    padding-top: 5rem;
+}
+
+.spacing-top {
+    padding-top: 3rem;
+}
+
+.spacing-top-little {
+    padding-top: 2rem;
+}
+
+.footer-spacing-top {
+    padding-top: 1rem;
+}
+
+.spacing-bottom {
+    padding-bottom: 0.5rem;
+}
+
+.spacing-bottom-large {
+    padding-bottom: 1.25rem;
+}
+
+.spacing-bottom-extra {
+    padding-bottom: 2rem;
+}
+
+.border {
+    border-top: 0.063rem solid #e0e0e0;
+    padding: 1rem 2rem;
+}
+
+.product-border {
+    border-top: 0.063rem solid #4F78C5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/*For debugging use*/
+.debugging {
+    background-color: aqua;
+}
+
+.debugging2 {
+    background-color: greenyellow;
+}
+
+/* This is the styling for the colour scheme.*/
+
+/* I referenced the resource from W3School on how to create shapes */
+.circle {
+    height: 12rem;
+    width: 20rem;
+    background-color: #FFFDF0;
+    border-radius: 1rem;
+    border: 0.031rem solid #4F78C5;  /* to see colour 0.031rem = 0.5px*/
+}
+
+.circle-two {
+    height: 12rem;
+    width: 20rem;
+    background-color: #4F78C5;
+    border-radius: 1rem;
+}
+
+.circle-three {
+    height: 12rem;
+    width: 20rem;
+    background-color: #819fd5;
+    border-radius: 1rem;
+}
+
+.circle-four {
+    height: 12rem;
+    width: 20rem;
+    background-color: #FDE68A;
+    border-radius: 1rem;
+}
+
+.circle-five {
+    height: 12rem;
+    width: 20rem;
+    background-color: #E9E2CD;
+    border-radius: 1rem;
+}

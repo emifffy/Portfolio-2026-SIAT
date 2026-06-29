@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emily Feng - Copywriter & UI/UX Designer</title>
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/interactive.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">
+            <div class="logo">
+                <div class="logo-shape"></div>
+            </div>
+        </div>
+        <div class="nav-controls">
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                </svg>
+            </button>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay">
+        <div class="menu-content">
+            <nav class="menu-nav">
+                <a href="#" class="menu-link active" data-page="hello">Hello</a>
+                <a href="#" class="menu-link" data-page="work">Work</a>
+                <a href="#" class="menu-link" data-page="about">About</a>
+            </nav>
+            <div class="menu-footer">
+                <p>Vancouver, British Columbia</p>
+                <a href="mailto:emilyweiting@gmail.com" class="contact-link">emilyweiting@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Work Page -->
+<div class="page" id="work-page">
+    <div class="page-header">
+        <h2>Work</h2>
+        <p class="page-subtitle">Selected projects and case studies</p>
+    </div>
+    
+    <div class="work-grid">
+        <!-- Your work items here -->
+        <div class="work-item">
+            <div class="work-header">
+                <h3>Project Title</h3>
+                <span class="work-type">UI/UX Design</span>
+                <span class="work-year">2023</span>
+            </div>
+            <p class="work-description">
+                A brief description of the project and the challenges it solved.
+            </p>
+            <div class="work-tags">
+                <span class="tag">Research</span>
+                <span class="tag">Wireframing</span>
+                <span class="tag">Prototyping</span>
+            </div>
+        </div>
+        <!-- Add more work items -->
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hello Page -->
+        <div class="page active" id="hello-page">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    I'm Emily Feng, a copywriter and 
+                    <span class="highlight">UI/UX designer</span>.
+                    I believe in the power of  
+                    <span class="highlight">words and design</span>, 
+                    working together to tell compelling stories 
+                    and solve real problems.
+                </h1>
+                
+                <div class="skills-tags">
+                    <span class="skill-tag">Copywriting</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Brand Strategy</span>
+                    <span class="skill-tag">Content Design</span>
+                </div>
+                
+                <div class="location">
+                    <p>Based in Vancouver, British Columbia</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about-page">
+            <div class="page-header">
+                <h2>About</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        "It's important to think about the interconnectedness between designers and thinkers, instead of trying to find a space you can occupy yourself."
+                    </p>
+                    
+                    <p>
+                        I'm Emily, a copywriter and UI/UX designer with over 5 years of experience based in Vancouver. Currently at studying at <span class="highlight">SFU</span>, I lead content design for merchant-facing products, focusing on creating clear, helpful experiences that empower small businesses to succeed online.
+                    </p>
+                    
+                    <p>
+                        My approach combines strategic thinking with empathetic design. I believe that great copy and thoughtful interfaces should feel invisible – they should simply help people accomplish their goals without friction or confusion.
+                    </p>
+                    
+                    <p>
+                        Before Shopify, I worked as a Content Strategist at <span class="highlight">IDEO</span>, where I helped diverse clients from healthcare to fintech communicate complex ideas simply. At <span class="highlight">Pentagram</span>, I specialized in brand voice development and long-form content strategy.
+                    </p>
+                    
+                    <p>
+                        In my free time, I enjoy exploring Vancouver's coffee scene, practicing calligraphy, and contributing to open-source design systems.
+                    </p>
+                </div>
+                
+                <div class="experience-section">
+                    <h3 class="section-title">Experience</h3>
+                    
+                    <div class="experience-item expanded">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h4>Shopify</h4>
+                                <span class="role">Copywriter</span>
+                                <span class="period">January - March 2025</span>
+                            </div>
+                            <button class="expand-btn">×</button>
+                        </div>
+                        <div class="experience-details">
+                            <p>Collaborated with the About Here Youtube Channel and performed a case study with them for four weeks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h4>IDEO</h4>
+                                <span class="role">Content Strategist</span>
+                                <span class="period">2021-2023</span>
+                            </div>
+                            <button class="expand-btn">+</button>
+                        </div>
+                        <div class="experience-details">
+                            <p>Developed content strategies for human-centered design projects across healthcare, education, and technology sectors. Created workshop frameworks and facilitation guides for design thinking methodologies.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-info">
+                                <h4>Pentagram</h4>
+                                <span class="role">Junior Copywriter</span>
+                                <span class="period">2019-2021</span>
+                            </div>
+                            <button class="expand-btn">+</button>
+                        </div>
+                        <div class="experience-details">
+                            <p>Crafted brand voice and messaging for startups and established brands. Specialized in sustainable fashion and B2B technology companies, creating everything from taglines to comprehensive brand guidelines.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+        
+        // Menu toggle functionality
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const menuLinks = document.querySelectorAll('.menu-link');
+        const pages = document.querySelectorAll('.page');
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            body.style.overflow = menuOverlay.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Page navigation
+        menuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPage = e.target.getAttribute('data-page');
+                
+                // Update active states
+                menuLinks.forEach(l => l.classList.remove('active'));
+                e.target.classList.add('active');
+                
+                // Show target page
+                pages.forEach(page => page.classList.remove('active'));
+                document.getElementById(`${targetPage}-page`).classList.add('active');
+                
+                // Close menu
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+        
+        // Experience item expansion
+        const experienceItems = document.querySelectorAll('.experience-item');
+        
+        experienceItems.forEach(item => {
+            const header = item.querySelector('.experience-header');
+            const expandBtn = item.querySelector('.expand-btn');
+            
+            header.addEventListener('click', () => {
+                const isExpanded = item.classList.contains('expanded');
+                
+                // Close all other items
+                experienceItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('expanded');
+                        otherItem.querySelector('.expand-btn').textContent = '+';
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('expanded');
+                expandBtn.textContent = isExpanded ? '+' : '×';
+            });
+        });
+        
+        // Close menu when clicking outside
+        menuOverlay.addEventListener('click', (e) => {
+            if (e.target === menuOverlay) {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && menuOverlay.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
