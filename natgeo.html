@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Geographic Waypoints App — Emily Feng</title>
     <link href="css/site.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="case-page">
+    <div class="cs-progress" aria-hidden="true"></div>
     <header class="site-header site-header--sticky">
         <a href="index.html" class="logo-link" aria-label="Emily Feng — home">
             <img src="img/LogoIcon.png" alt="" width="82" height="91">
@@ -26,24 +28,167 @@
         </nav>
     </div>
 
-    <main>
-        <div class="case-hero">
-            <img src="img/Case1.png" alt="National Geographic Waypoints — Discover deeper. Bring the story home." width="1416" height="508">
+    <main class="cs">
+        <div class="cs-hero">
+            <img src="img/Case1.png" alt="National Geographic Waypoints — Waypoints App" width="1416" height="508">
         </div>
-        <article class="case-body">
-            <p class="work-date">Jan - Apr 2025</p>
-            <h1 class="case-title">National Geographic Waypoints App</h1>
-            <p class="case-summary">Developed a mobile app for National Geographic focused on community connection and local-based tourism.</p>
-            <!-- Case study write-up goes here: problem, process, research, outcomes. -->
-            <nav class="case-nav" aria-label="Case studies">
-                <a href="work.html" class="view-case back"><svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>All work</a>
-                <a href="icelandic-design-awards.html" class="view-case">Next: Icelandic Design Awards
-                    <svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>
-                </a>
-            </nav>
-        </article>
+
+        <section class="cs-wrap cs-intro">
+            <h1 class="cs-title reveal">National Geographic Waypoints</h1>
+            <div class="cs-grid cs-grid--overview">
+                <div class="reveal">
+                    <h2 class="cs-label cs-label--meta">Overview</h2>
+                    <p>National Geographic Waypoints is a culture-led exploration app that turns National Geographic’s travel stories into places you can actually visit. Over the course of five weeks, my team designed and tested the app for aspiring explorers who want to connect with local communities rather than follow a packaged route.</p>
+                    <p>I chose National Geographic as our client, shaped the original problem framing, designed the first wireframes, and then led the home-screen map with swipeable cards, the radar compass mode, the traveler profile, and the search bar redesign.</p>
+                </div>
+                <dl class="cs-meta reveal" style="--d:1">
+                    <dt class="cs-label cs-label--meta">Strategies</dt>
+                    <dd>UX Research, Brand Identity, Mobile Prototyping, Wireframing, Product Strategy</dd>
+                    <dt class="cs-label cs-label--meta">Tools</dt>
+                    <dd>Figma/FigJam, HTML, CSS &amp; Java</dd>
+                    <dt class="cs-label cs-label--meta">Type</dt>
+                    <dd>SFU SIAT studio project</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <div class="cs-grid cs-grid--feature">
+                <figure class="cs-media cs-media--flush reveal-media">
+                    <img src="img/Case1Page/Challenge.png" alt="A traveller with a backpack looking toward a snow-capped mountain" width="598" height="620" loading="lazy">
+                </figure>
+                <div class="reveal" style="--d:1">
+                    <h2 class="cs-label cs-label--meta">The Challenge</h2>
+                    <p>During the first week of the project, I became interested in the problem space of how road trips work while driving. A trip can mean juggling five to six apps at once: Google Maps for directions, Spotify for music, Splitwise for costs, Yelp for food, and a notes app for the schedule. None of them talk to each other, so the traveler becomes the glue.</p>
+                    <p>But the deeper problem is that these tools treat a trip as logistics, and none of them help you understand where you are. National Geographic publishes stories and guides that could, but they live in print magazines and text-heavy websites, far from the moment you’re deciding where to stop.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case1Page/Audience.png" alt="FigJam research board covering travel values, National Geographic’s brand, travel industry trends and the explorer mindset" width="1612" height="515" loading="lazy">
+            </figure>
+            <h2 class="cs-label cs-label--meta cs-label--lead reveal">Who it’s for</h2>
+            <div class="cs-grid cs-grid--half">
+                <div class="reveal">
+                    <p>Waypoints is for aspiring explorers: travellers who want more than a checklist of landmarks and are curious about the places they pass through. <strong>They want authentic, local experiences, but they don’t have a good way to find them.</strong> Their phones are full of tools for planning and navigating, and almost none of them help with discovery.</p>
+                </div>
+                <div class="reveal" style="--d:1">
+                    <p><strong>This isn’t a niche preference.</strong> 73% of travellers want experiences that represent local culture, 72% want to help boost revenue in local economies, and 84% believe preserving cultural heritage is crucial <strong>(Kellett, 2022)</strong>. They also fit National Geographic’s own audience: people who already trust the brand for stories and want to act on them.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-film" aria-label="Problem reframing">
+            <div class="cs-film-media" aria-hidden="true">
+                <video src="img/Case1Page/Case1Quote.mp4" muted loop playsinline preload="metadata"></video>
+            </div>
+            <div class="cs-wrap cs-film-inner">
+                <div class="cs-film-note" aria-hidden="true">
+                    <img class="cs-film-note--dark" src="img/Case1Page/subheading.png" alt="" width="596" height="185">
+                    <img class="cs-film-note--light" src="img/Case1Page/subheadingwhite.png" alt="" width="596" height="185">
+                </div>
+                <p class="visually-hidden">Those two threads gave us a sharper question:</p>
+                <blockquote class="cs-quote">
+                    <p>Instead of asking how to make road trips easier to plan, we asked:<br> “How might we help { aspiring explorers } connect with local communities through { meaningful, culture-led travel }?”</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <section class="cs-wrap cs-after-film">
+            <p class="reveal">Audience feedback pushed us the same way. The idea was interesting, but it needed to <strong>focus on the journey</strong> rather than the destination, and it had to be something only National Geographic could do. That led us to the <strong>Waypoints</strong>: a place worth stopping for because of the story behind it, not a step on a route. It turned an app-consolidation problem into a National Geographic one.</p>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case1Page/Ideation.png" alt="Wireframes for three interventions: the Field Briefing, the Waypoint Kit and the Explorer Magazine" width="1617" height="526" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">Ideation</h2>
+                <div class="reveal" style="--d:1">
+                    <p>I proposed <strong>three interventions</strong> and wireframed each of them. <strong>The Field Briefing</strong> would take a start point, an end point, and your interests, then curate an expedition-style route. <strong>The Waypoint Kit</strong> would mail travellers a fold-out map and a field book of prompts before they left. <strong>The Explorer Magazine</strong> would lay a traveler’s photos and field-book entries into a magazine spread, so people had a keepsake of the trip rather than a camera roll.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case1Page/wireframesOld.png" alt="Early wireframes combining the Field Briefing with a short onboarding survey" width="1617" height="1259" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">Pivoting</h2>
+                <div class="reveal" style="--d:1">
+                    <p>User testing showed the onboarding quiz was the weakest part of the design. Participants said the discovery questions “felt like a psychology test,” and the “Begin Briefing” button didn’t make clear what was coming next. Several were still unsure what the app was for after three screens. I decided with my team to cut the quiz entirely and moved to a map-led experience where discovery is based on where you are.</p>
+                    <p>I designed the new wireframe, and the team agreed to jump straight to the map. The change also fit National Geographic’s explorer mindset better: curiosity first, with no profile to complete.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cs-wrap cs-divider reveal">
+            <svg class="cs-divider-arrow" viewBox="0 0 24 170" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v167M2 158l10 10 10-10"/></svg>
+            <h2 class="cs-label">Developing the Brand</h2>
+        </div>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case1Page/brand.png" alt="Waypoints brand guide: logo, Charcoal, Supernova Yellow and White palette, and the Geograph type scale" width="1612" height="887" loading="lazy">
+            </figure>
+            <p class="reveal">Moving onto the visual identity for Waypoints: we paired the wide-tracked Geograph typeface against a charcoal canvas. Using three colours, Charcoal, Supernova Yellow, and White, built to feel editorial, exploratory, and authentic to the brand.</p>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media cs-media--frame reveal-media">
+                <video src="img/Case1Page/Case1Clip.mov.mp4" muted loop playsinline preload="metadata" aria-label="Final iterations of the Waypoints app: exploration, documentation and profile screens"></video>
+            </figure>
+            <figure class="cs-media reveal-media">
+                <img src="img/Case1Page/maps.png" alt="Map screens showing the Where To search and swipeable Waypoint story cards" width="1612" height="745" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">One screen for finding<br>and planning</h2>
+                <div class="reveal" style="--d:1">
+                    <p>On the <strong>home page</strong> the user lands on the explore map with swipe-able cards. I designed the cards so a traveler can see places on the map and swipe through them below to add stops, which makes browsing and planning all in one gesture.</p>
+                    <p>For more inquisitive explorers, I also helped develop a radar compass where a slider surfaces new locations around you. The map and compass became the app’s two modes for two intents: planning and wandering travellers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media cs-media--narrow reveal-media">
+                <img src="img/Case1Page/prototypes.png" alt="Six high-fidelity screens: compass mode, magazine builder, and the traveller profile" width="862" height="1154" loading="lazy">
+            </figure>
+            <p class="cs-caption cs-caption--center reveal"><strong>Full interaction on Figma as per request.</strong></p>
+        </section>
+
+        <section class="cs-wrap">
+            <div class="cs-grid cs-grid--row cs-grid--spaced">
+                <h2 class="cs-label reveal">Documenting the<br>journey as it happens</h2>
+                <div class="reveal" style="--d:1">
+                    <p>I created the idea of a <strong>self-made</strong> National Geographic magazine so travellers keep a lasting memory of the trip. They add photos and notes along the way, edit the layout, and order a printed copy at checkout. It also gives National Geographic a revenue stream tied to the legacy of its print heritage.</p>
+                    <p>Under the <strong>user profile</strong>, I designed a traveller persona as a living archive: country badges, explorer tiers, recent activity, orders and shipments are all located under one page for convenience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-reflection">
+            <div class="cs-wrap cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">My Reflection</h2>
+                <div class="reveal" style="--d:1">
+                    <p>The biggest lesson was that personalization can become friction. I expected the onboarding quiz to make the app feel tailored, but testing showed it made people hesitate before they’d seen any value. Cutting it let travellers start exploring right away, and that mattered more than any feature I added. For my next steps, I would test compass mode with travellers on the move, and develop the self-made magazine further, since reviewers saw it as the feature that could set Waypoints apart.</p>
+                    <p>Overall, what Waypoints taught me is that the goal was never just a better way to plan a trip. It was to turn every stop into a story, and every traveller into an explorer.</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="cs-wrap case-nav cs-nav" aria-label="Case studies">
+            <a href="work.html" class="view-case back"><svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>All work</a>
+            <a href="icelandic-design-awards.html" class="view-case">Next: Icelandic Design Awards
+                <svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>
+            </a>
+        </nav>
     </main>
 
     <script src="hamburger.js"></script>
+    <script src="case.js"></script>
 </body>
 </html>

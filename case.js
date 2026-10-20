@@ -31,6 +31,19 @@
         videos.forEach(function (v) { vio.observe(v); });
     }
 
+    // Film quote: roll the clip in while the band is on screen, back out when it leaves
+    const films = document.querySelectorAll('.cs-film');
+    if ('IntersectionObserver' in window && !reduce) {
+        const fio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                entry.target.classList.toggle('is-rolling', entry.isIntersecting);
+            });
+        }, { rootMargin: '0px 0px -20% 0px', threshold: 0.35 });
+        films.forEach(function (el) { fio.observe(el); });
+    } else {
+        films.forEach(function (el) { el.classList.add('is-rolling'); });
+    }
+
     // Scroll progress bar
     const root = document.documentElement;
     const progress = document.querySelector('.cs-progress');
