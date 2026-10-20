@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Spot — Emily Feng</title>
+    <link href="css/site.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="case-page">
+    <div class="cs-progress" aria-hidden="true"></div>
+    <header class="site-header site-header--sticky">
+        <a href="index.html" class="logo-link" aria-label="Emily Feng — home">
+            <img src="img/LogoIcon.png" alt="" width="82" height="91">
+        </a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <div class="menu-overlay" id="menu">
+        <nav class="menu-nav" aria-label="Main">
+            <a href="index.html" class="menu-link" style="--i:0">{ hello }</a>
+            <a href="work.html" class="menu-link" style="--i:1">{ work }</a>
+            <a href="about.html" class="menu-link" style="--i:2">{ about }</a>
+        </nav>
+    </div>
+
+    <main class="cs cs--studyspot">
+        <div class="cs-hero cs-hero--light">
+            <img src="img/Case3Page/Case3Title.png" alt="Study Spot — four blue map pins with a coffee cup, book, library and graduation cap" width="1920" height="720">
+        </div>
+
+        <section class="cs-wrap cs-intro">
+            <h1 class="cs-title reveal">Study Spot</h1>
+            <div class="cs-grid cs-grid--overview">
+                <div class="reveal">
+                    <h2 class="cs-label cs-label--meta">Overview</h2>
+                    <p>Study Spot lets students find and post study spaces, but our client had a retention problem: users rarely created their own spots, hesitated to share their location, and dropped off after a single visit. Over four weeks, my team of four ran a mixed-methods usability evaluation to answer one question: what would make Study Spot a daily tool instead of a one-time try?</p>
+                    <p>As a researcher, I co-designed the research instruments and owned the qualitative side: the interview discussion guide, the post-test questionnaire and the A/B measurement plan. I moderated sessions and synthesized transcripts into the insight themes that set feature priorities.</p>
+                </div>
+                <dl class="cs-meta reveal" style="--d:1">
+                    <dt class="cs-label cs-label--meta">Strategies</dt>
+                    <dd>Diary Study, Comparative Usability Testing, Semi-structured Interviews, Questionnaire Design</dd>
+                    <dt class="cs-label cs-label--meta">Tools</dt>
+                    <dd>Figma/FigJam, Online Surveys</dd>
+                    <dt class="cs-label cs-label--meta">Type</dt>
+                    <dd>SFU SIAT, IAT 432 client project (team of 4)</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case3Page/Platform.png" alt="Study Spot’s landing page, “Find your perfect study spot”, beside its sign-up form" width="1632" height="633" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--half">
+                <div class="reveal">
+                    <h2 class="cs-label cs-label--meta">The Challenge</h2>
+                    <p>Study Spot helps students discover cafés, libraries and study spaces with the amenities they need. The platform depends on students posting and reviewing spots, but <strong>most users never contributed, and most never came back</strong> after their first visit.</p>
+                </div>
+                <div class="reveal" style="--d:1">
+                    <h2 class="cs-label cs-label--meta">Who it’s for</h2>
+                    <p>Students aged 16 to 22 who care about a space’s features (Wi-Fi, outlets, whiteboards), want to study alongside other students, or need spots that work for group projects. We recruited solo, group and hands-on learners from SFU and other schools so we could see different workflows.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <div class="cs-bubbles reveal" role="list" aria-label="Patterns the client described">
+                <p class="cs-bubble cs-bubble--left" role="listitem">Difficulty getting users to <strong>create their own spots</strong></p>
+                <p class="cs-bubble cs-bubble--mid" role="listitem">Users often <strong>drop off</strong> after their first visit</p>
+                <p class="cs-bubble cs-bubble--right" role="listitem">Hesitancy in <strong>sharing location</strong> information</p>
+            </div>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">What the client <br>told us</h2>
+                <div class="reveal" style="--d:1">
+                    <p>In our first meeting, the client described a clear pattern of reluctance and short-term use. Their goals for the product were to give students <strong>more in-depth information about amenities</strong>, clearly communicate the <strong>study environment</strong> (noise, shared or solo space), and make it easier to find spots for <strong>group work</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-band" aria-label="Research question">
+            <div class="cs-wrap">
+                <p class="cs-band-kicker reveal">Our research question</p>
+                <blockquote class="cs-quote reveal" style="--d:1">
+                    <p>“How might we turn Study Spot from { a one-time try } into { a daily study companion }?”</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <div class="cs-wrap cs-divider reveal">
+            <svg class="cs-divider-arrow" viewBox="0 0 24 170" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v167M2 158l10 10 10-10"/></svg>
+            <h2 class="cs-label">Designing the research</h2>
+        </div>
+
+        <section class="cs-wrap">
+            <figure class="cs-media cs-diagram reveal-media">
+                <ol class="cs-timeline" aria-label="Four-week research timeline">
+                    <li class="is-up is-key" style="--c:1"><span>Meet the client to learn their design motivations</span></li>
+                    <li class="is-up is-small" style="--c:2"><span>Recruit for diary study</span></li>
+                    <li class="is-down is-small" style="--c:3"><span>Start diary study</span></li>
+                    <li class="is-down" style="--c:4"><span>Pilot the task script &amp; study instruments</span></li>
+                    <li class="is-up" style="--c:5"><span>Recruit &amp; screen participants via questionnaire</span></li>
+                    <li class="is-down is-small" style="--c:6"><span>End diary study</span></li>
+                    <li class="is-down" style="--c:7"><span>Run sessions: quantitative &amp; qualitative data</span></li>
+                    <li class="is-up" style="--c:8"><span>Identify insights &amp; relate them to client goals</span></li>
+                </ol>
+                <p class="cs-timeline-bracket" aria-hidden="true"><span>Diary study runs 3–5 days</span></p>
+                <figcaption class="cs-diagram-cap">Our plan over four weeks. The diary study ran alongside piloting and recruitment, so early attitudes shaped the test script.</figcaption>
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">A study in <br>three layers</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Retention is about how feelings change over time, so a single test session wasn’t enough. I helped plan three methods that each answer a different part of the question: <strong>how attitudes shift</strong> across real use, <strong>where the product breaks</strong> during set tasks, and <strong>why</strong> participants reacted the way they did.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <div class="cs-methods">
+                <article class="cs-method reveal">
+                    <p class="cs-method-num">01</p>
+                    <h3 class="cs-method-title">Diary study</h3>
+                    <dl>
+                        <dt>Who</dt><dd>4 participants over 3–5 days</dd>
+                        <dt>When</dt><dd>Before testing, with the live site in real-world use</dd>
+                        <dt>Captures</dt><dd>Evolving attitudes, likes and dislikes, logged each day via an online survey</dd>
+                    </dl>
+                </article>
+                <article class="cs-method reveal" style="--d:1">
+                    <p class="cs-method-num">02</p>
+                    <h3 class="cs-method-title">Comparative usability test</h3>
+                    <dl>
+                        <dt>Who</dt><dd>10 participants in booked rooms, a natural study setting</dd>
+                        <dt>What</dt><dd>Study Spot vs. competitor Study Near Me, same four tasks on each</dd>
+                        <dt>Captures</dt><dd>Task completion, time, errors and wrong paths</dd>
+                    </dl>
+                </article>
+                <article class="cs-method reveal" style="--d:2">
+                    <p class="cs-method-num">03</p>
+                    <h3 class="cs-method-title">Questionnaire &amp; interview</h3>
+                    <dl>
+                        <dt>Who</dt><dd>Every test participant, straight after their session</dd>
+                        <dt>What</dt><dd>8–10 Likert items, a workload check, then a 10–15 min semi-structured interview</dd>
+                        <dt>Captures</dt><dd>Frustration, effort and the reasons behind observed struggle</dd>
+                    </dl>
+                </article>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media cs-diagram reveal-media">
+                <div class="cs-flow" aria-label="Session flow for each participant">
+                    <div class="cs-flow-step cs-flow-step--wide">
+                        <p class="cs-flow-kicker">Task script, run on both sites</p>
+                        <div class="cs-flow-sites"><span class="is-ours">Study Spot</span><span>Study Near Me</span></div>
+                        <ol class="cs-flow-tasks">
+                            <li>Find a specific café</li>
+                            <li>Filter by Wi-Fi + outlets + distance</li>
+                            <li>Create a spot</li>
+                            <li>Write a review</li>
+                        </ol>
+                    </div>
+                    <svg class="cs-flow-arrow" viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h37M33 1l5 5-5 5"/></svg>
+                    <div class="cs-flow-step">
+                        <p class="cs-flow-kicker">Post-test questionnaire</p>
+                        <ul class="cs-flow-list">
+                            <li>8–10 Likert items</li>
+                            <li>Workload: mental demand, effort, frustration</li>
+                            <li>Open-ended prompts</li>
+                        </ul>
+                    </div>
+                    <svg class="cs-flow-arrow" viewBox="0 0 40 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h37M33 1l5 5-5 5"/></svg>
+                    <div class="cs-flow-step">
+                        <p class="cs-flow-kicker">Semi-structured interview</p>
+                        <ul class="cs-flow-list">
+                            <li>10–15 minutes</li>
+                            <li>Probes moments of struggle we observed</li>
+                        </ul>
+                    </div>
+                </div>
+                <figcaption class="cs-diagram-cap">One session per participant. The interview followed up on what we watched them do.</figcaption>
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">Benchmarking <br>against a competitor</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Study Near Me works much like Study Spot but covers far more of Canada. Running <strong>the same four tasks on both sites</strong> let us separate “this product’s problem” from “this category’s problem”: if students struggled on both, the issue was the task itself, and if they struggled only on Study Spot, it was ours to fix.</p>
+                    <p>I wrote the discussion guide and the post-test questionnaire so the ratings and the interview lined up: a high frustration score gave us a specific moment to ask about.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cs-wrap cs-divider reveal">
+            <svg class="cs-divider-arrow" viewBox="0 0 24 170" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v167M2 158l10 10 10-10"/></svg>
+            <h2 class="cs-label">What we found</h2>
+        </div>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case3Page/SpotDetail.png" alt="A Study Spot listing for Blenz Cafe Central City Mall beside a map of pins, with the creator’s quote: “I wanted to build something for people who do a lot of group work.”" width="1900" height="872" loading="lazy">
+            </figure>
+            <p class="cs-caption reveal">The spot page our participants worked through. The creator built it for group work, but students hit four walls before they reached that value.</p>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media cs-diagram reveal-media">
+                <ol class="cs-journey" aria-label="Where students dropped off, and what would fix it">
+                    <li>
+                        <p class="cs-journey-step"><span>01</span>Open the map</p>
+                        <p class="cs-journey-wall">Map won’t load without location permission</p>
+                        <p class="cs-journey-fix">Load at a default region</p>
+                    </li>
+                    <li>
+                        <p class="cs-journey-step"><span>02</span>View a spot</p>
+                        <p class="cs-journey-wall">Sign-up required to see basic details</p>
+                        <p class="cs-journey-fix">Ask for an account only to contribute</p>
+                    </li>
+                    <li>
+                        <p class="cs-journey-step"><span>03</span>Judge the space</p>
+                        <p class="cs-journey-wall">Noise level and hours often empty</p>
+                        <p class="cs-journey-fix">Show address and hours without sign-in</p>
+                    </li>
+                    <li>
+                        <p class="cs-journey-step"><span>04</span>Contribute</p>
+                        <p class="cs-journey-wall">Unsure anyone will read a review</p>
+                        <p class="cs-journey-fix">Surface spot counts &amp; recent activity</p>
+                    </li>
+                </ol>
+                <div class="cs-journey-key" aria-hidden="true">
+                    <span class="is-wall">Barrier we observed</span>
+                    <span class="is-fix">Design implication</span>
+                </div>
+            </figure>
+        </section>
+
+        <section class="cs-wrap">
+            <div class="cs-grid cs-grid--row cs-finding">
+                <h2 class="cs-label reveal">01 — Location gating <br>blocked the core task</h2>
+                <div class="reveal" style="--d:1">
+                    <p>The map refused to load without location permission, and the address often never appeared on its own. One participant pointed out that a map doesn’t need their address to load itself. <strong>Students who declined tracking lost access to information that had nothing to do with where they were.</strong></p>
+                </div>
+            </div>
+            <div class="cs-grid cs-grid--row cs-finding">
+                <h2 class="cs-label reveal">02 — The account wall <br>came before any value</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Sign-up was required just to view a spot’s basic details. One participant said they’d give up rather than create an account for a site they weren’t sure they’d use again. <strong>The wall sat exactly where students were deciding whether to come back.</strong></p>
+                </div>
+            </div>
+            <div class="cs-grid cs-grid--row cs-finding">
+                <h2 class="cs-label reveal">03 — Fields were present <br>but empty of meaning</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Noise level appeared as a label with no value on most spots, and hours were often unavailable. <strong>The environment info meant to set Study Spot apart was the least trustworthy part of it</strong>, which worked against the client’s own goal of communicating the study environment.</p>
+                </div>
+            </div>
+            <div class="cs-grid cs-grid--row cs-finding">
+                <h2 class="cs-label reveal">04 — Contribution is <br>social proof, not effort</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Participants weren’t blocked by the posting flow; they were unsure anyone would read what they posted. One participant wasn’t confident enough people used the site to make a review worth writing. <strong>Low contribution wasn’t a usability problem. It was a trust problem.</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <div class="cs-grid cs-grid--row cs-grid--spaced">
+                <h2 class="cs-label reveal">Design <br>implications</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Each recommendation removes a wall before the student has a reason to leave:</p>
+                    <ul class="cs-list">
+                        <li><strong>Load the map at a default region</strong> instead of requiring location permission.</li>
+                        <li><strong>Show address and hours without sign-in</strong>, so browsing never needs an account.</li>
+                        <li><strong>Gate account creation behind contribution</strong>, not browsing.</li>
+                        <li><strong>Surface spot counts or recent activity</strong> as social proof that reviews get read.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-reflection">
+            <div class="cs-wrap cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">My Reflection</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Our task script let participants stumble onto filters rather than find them on purpose. That surfaced a discoverability problem the questionnaire alone wouldn’t have caught, and it reminded me to pair structured ratings with observed behaviour, not just self-report.</p>
+                    <p>Overall, Study Spot taught me that retention is decided in the first visit. Every wall a student hits before they see any value becomes a reason not to come back.</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="cs-wrap case-nav cs-nav" aria-label="Case studies">
+            <a href="work.html" class="view-case back"><svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>All work</a>
+            <a href="natgeo.html" class="view-case">Next: National Geographic Waypoints App
+                <svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>
+            </a>
+        </nav>
+    </main>
+
+    <script src="hamburger.js"></script>
+    <script src="case.js"></script>
+</body>
+</html>
