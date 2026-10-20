@@ -10,6 +10,15 @@
 }
 
 @font-face {
+    font-family: 'PP Neue Montreal';
+    src: url('../fonts/PPNeueMontreal-Medium.otf') format('opentype'),
+         url('../fonts/PPNeueMontreal-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'PP Eiko';
     src: url('../fonts/PPEiko-LightItalic.otf') format('opentype'),
          url('../fonts/PPEiko-LightItalic.ttf') format('truetype');
@@ -594,6 +603,239 @@ body.menu-open .site-header {
 .case-nav .back:hover svg,
 .case-nav .back:focus-visible svg {
     transform: scaleX(-1) translateX(6px);
+}
+
+/* ---------- Case study: long-form layout ---------- */
+
+.cs {
+    --cs-max: calc(1612 * var(--u));
+    --cs-body: max(17px, calc(34 * var(--u)));
+    --cs-sub: max(16px, calc(30 * var(--u)));
+    color: #1E1E1E;
+}
+
+.cs-progress {
+    position: fixed;
+    inset: 0 auto auto 0;
+    z-index: 60;
+    width: 100%;
+    height: 3px;
+    background: #1E1E1E;
+    transform: scaleX(var(--p, 0));
+    transform-origin: 0 50%;
+}
+
+.cs-wrap {
+    width: min(100% - 2 * var(--gutter), var(--cs-max));
+    margin-inline: auto;
+}
+
+.cs-hero {
+    overflow: hidden;
+    background: var(--charcoal);
+}
+
+.cs-hero img {
+    width: 100%;
+    height: auto;
+    animation: cs-hero-in 1.4s var(--ease-out) both;
+}
+
+@keyframes cs-hero-in {
+    from { clip-path: inset(0 0 100% 0); filter: blur(8px); }
+    to { clip-path: inset(0); filter: none; }
+}
+
+.cs p,
+.cs dd {
+    font-size: var(--cs-body);
+    line-height: 1.32;
+    color: #1E1E1E;
+}
+
+.cs p + p {
+    margin-top: 1em;
+}
+
+.cs strong {
+    font-weight: 500;
+}
+
+.cs-label {
+    font-weight: 500;
+    font-size: var(--cs-sub);
+    line-height: 1.25;
+    color: #1E1E1E;
+}
+
+/* Overview / meta labels: Regular at 50% */
+.cs-label--meta {
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.cs-title {
+    font-weight: 400;
+    font-size: max(32px, calc(60 * var(--u)));
+    line-height: 1.1;
+    margin-bottom: calc(110 * var(--u));
+}
+
+.cs-intro {
+    padding-top: calc(110 * var(--u));
+}
+
+.cs-grid {
+    display: grid;
+    column-gap: calc(80 * var(--u));
+    row-gap: 32px;
+}
+
+.cs-grid .cs-label {
+    margin-bottom: calc(24 * var(--u));
+}
+
+.cs-grid--overview { grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); }
+.cs-grid--half     { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cs-grid--row      { grid-template-columns: minmax(0, 586fr) minmax(0, 1026fr); column-gap: 0; }
+
+.cs-meta dd + dt {
+    margin-top: calc(40 * var(--u));
+}
+
+.cs-media {
+    margin-top: calc(160 * var(--u));
+    margin-bottom: calc(80 * var(--u));
+}
+
+.cs-media + .cs-media {
+    margin-top: calc(100 * var(--u));
+}
+
+.cs-media img,
+.cs-media video {
+    width: 100%;
+    height: auto;
+}
+
+.cs-media--frame {
+    background: var(--charcoal);
+}
+
+.cs-media--wide {
+    width: calc(100% * 1639 / 1612);
+}
+
+.cs-caption {
+    margin-top: calc(-40 * var(--u));
+}
+
+.cs-divider {
+    display: flex;
+    align-items: flex-end;
+    gap: calc(24 * var(--u));
+    margin-top: calc(140 * var(--u));
+    padding-left: calc(586 * var(--u));
+}
+
+.cs-divider-arrow {
+    flex: none;
+    width: max(14px, calc(24 * var(--u)));
+    height: max(90px, calc(170 * var(--u)));
+    color: #1E1E1E;
+    margin-left: calc(-12 * var(--u));
+}
+
+.cs-divider-arrow path {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+}
+
+.js .cs-divider.in-view .cs-divider-arrow path {
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1.4s var(--ease-out) 0.15s;
+}
+
+.cs-divider.in-view .cs-divider-arrow {
+    animation: cs-arrow-bob 2.4s ease-in-out 1.6s infinite;
+}
+
+@keyframes cs-arrow-bob {
+    0%, 100% { transform: none; }
+    50% { transform: translateY(8px); }
+}
+
+.cs-reflection {
+    margin-top: calc(180 * var(--u));
+    padding-block: calc(160 * var(--u));
+    background: var(--charcoal);
+}
+
+.cs-reflection p,
+.cs-reflection .cs-label {
+    color: var(--cream);
+}
+
+.cs-nav {
+    margin-block: calc(80 * var(--u)) calc(120 * var(--u));
+    border-top: 0;
+}
+
+/* Scroll reveals (only hidden once JS confirms it is running) */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(6px);
+    transition: opacity 0.9s ease, transform 1s var(--ease-out), filter 0.9s ease;
+    transition-delay: calc(var(--d, 0) * 0.14s);
+}
+
+.js .reveal.in-view {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+.js .reveal-media {
+    clip-path: inset(12% 6% 12% 6%);
+    opacity: 0.2;
+    transition: clip-path 1.3s var(--ease-out), opacity 0.9s ease;
+}
+
+.js .reveal-media > img,
+.js .reveal-media > video {
+    transform: scale(1.12);
+    transition: transform 1.6s var(--ease-out);
+}
+
+.js .reveal-media.in-view {
+    clip-path: inset(0);
+    opacity: 1;
+}
+
+.js .reveal-media.in-view > img,
+.js .reveal-media.in-view > video {
+    transform: none;
+}
+
+@media (max-width: 800px) {
+    .cs-grid--overview,
+    .cs-grid--half,
+    .cs-grid--row {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-grid--row .cs-label br {
+        display: none;
+    }
+
+    .cs-divider {
+        padding-left: 0;
+    }
+
+    .cs-media--wide {
+        width: 100%;
+    }
 }
 
 /* ---------- About ---------- */

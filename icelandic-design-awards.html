@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Icelandic Design Awards — Emily Feng</title>
     <link href="css/site.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="case-page">
+    <div class="cs-progress" aria-hidden="true"></div>
     <header class="site-header site-header--sticky">
         <a href="index.html" class="logo-link" aria-label="Emily Feng — home">
             <img src="img/LogoIcon.png" alt="" width="82" height="91">
@@ -26,24 +28,119 @@
         </nav>
     </div>
 
-    <main>
-        <div class="case-hero">
-            <video src="img/Case2.mp4" width="1416" height="508" muted loop autoplay playsinline></video>
+    <main class="cs">
+        <div class="cs-hero">
+            <img src="img/Case2Page/Case2Title.png" alt="Discover, explore, recognize Icelandic design" width="1920" height="700">
         </div>
-        <article class="case-body">
-            <p class="work-date">May - Jun 2026</p>
-            <h1 class="case-title">Icelandic Design Awards</h1>
-            <p class="case-summary">Created a microsite archive celebrating past winners by unifying visual identity and design.</p>
-            <!-- Case study write-up goes here: problem, process, research, outcomes. -->
-            <nav class="case-nav" aria-label="Case studies">
-                <a href="work.html" class="view-case back"><svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>All work</a>
-                <a href="about-here.html" class="view-case">Next: About Here Collaboration
-                    <svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>
-                </a>
-            </nav>
-        </article>
+
+        <section class="cs-wrap cs-intro">
+            <h1 class="cs-title reveal">Icelandic Design Awards</h1>
+            <div class="cs-grid cs-grid--overview">
+                <div class="reveal">
+                    <h2 class="cs-label cs-label--meta">Overview</h2>
+                    <p>DesignMarch turns Reykjavík into a citywide exhibition of Icelandic design. In a four-week UX course, my team of four created a visual identity and microsite for the Icelandic Design Awards, an archive that leads with winners’ stories and invites local designers and architects to nominate their own work.</p>
+                    <p>I established core design principles through a final poster with assets by pairing typography and colour. Additionally, I developed wireframes and prototypes for the microsite to help map user flows with interactive landing pages.</p>
+                </div>
+                <dl class="cs-meta reveal" style="--d:1">
+                    <dt class="cs-label cs-label--meta">Strategies</dt>
+                    <dd>UI/UX Design, Visual Identity, Prototyping, Web Development</dd>
+                    <dt class="cs-label cs-label--meta">Tools</dt>
+                    <dd>Figma, HTML &amp; CSS, CodePen &amp; Codrops</dd>
+                    <dt class="cs-label cs-label--meta">Type</dt>
+                    <dd>Case Study</dd>
+                </dl>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media cs-media--frame reveal-media">
+                <video src="img/Case2Page/Case2Demo.mp4" muted loop playsinline preload="metadata" aria-label="Icelandic Design Awards 2025 microsite demo"></video>
+            </figure>
+            <div class="cs-grid cs-grid--half">
+                <div class="reveal">
+                    <h2 class="cs-label cs-label--meta">The Challenge</h2>
+                    <p>Nominations to the Icelandic Design Awards are self-submitted. Designers and architects have to decide their work is worth putting forward. We asked how might winners’ stories make that decision feel natural?</p>
+                </div>
+                <div class="reveal" style="--d:1">
+                    <h2 class="cs-label cs-label--meta">Who it’s for</h2>
+                    <p>Local Icelandic designers and architects who take part in the festival. Seeing the people and values behind past winners shows them what recognition looks like and that they belong in that group.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case2Page/Phase1.png" alt="Graphic inspirations, colour palette, poster iterations and the final poster with type specimens" width="1612" height="907" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">Phase 1: Visual Brand<br>and Development</h2>
+                <div class="reveal" style="--d:1">
+                    <p>We studied precedent designer Eddie Opara and distilled his work into two qualities to carry forward: meaning through conceptual contrast and selective colour emphasis, paired with Ellen Lupton’s principle of colour. Week 1 critique showed we were surfacing too much and under-using the typeface. In Week 2 I narrowed the content and made type carry the movement.</p>
+                    <p>My poster became the team’s direction because its type movement and flexible image treatment worked across content. It also captured the tension between traditional craft and emerging digital art that DesignMarch showcases.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case2Page/Assets.png" alt="Wayfinding signage, a screen display and invitation applying the visual system" width="1612" height="832" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">Phase 2: Visual System<br>&amp; Asset Translation</h2>
+                <div class="reveal" style="--d:1">
+                    <p>I turned the poster into a system the team could build with. A saturated palette carries the festival’s energy. The type pairs Switzer (structure), PP Eiko Italic (movement and emphasis) and Steps Mono (contrast). A pixel-based image treatment keeps depth consistent across any photo. We stress-tested the system across three microsite directions (discovery, exploration, recognition) and moved forward with recognition, because it best fit the awards goal.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cs-wrap cs-divider reveal">
+            <svg class="cs-divider-arrow" viewBox="0 0 24 170" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1v167M2 158l10 10 10-10"/></svg>
+            <h2 class="cs-label">Developing the microsite</h2>
+        </div>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case2Page/Microsite1.png" alt="Microsite page annotated with hover, highlight and body type styles" width="1612" height="543" loading="lazy">
+            </figure>
+            <figure class="cs-media cs-media--wide reveal-media">
+                <img src="img/Case2Page/Microsite2.png" alt="Microsite landing annotated with textured image treatment, floating labels and pixel interactions" width="1639" height="642" loading="lazy">
+            </figure>
+            <div class="cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">Prototyping</h2>
+                <div class="reveal" style="--d:1">
+                    <p>Our goal was to get designers to submit their own work, so I designed the first two pages of the microsite around curiosity and self-selection.</p>
+                    <p><strong>Landing:</strong> I gave visitors multiple ways in (the nav bar, scrolling, or clicking anywhere) so they can choose their own path. Hovering over the tags previews the award categories, which gives people a quick look at what the awards recognize before they commit to a page. I prototyped this in Figma and built it in HTML, CSS and JS.</p>
+                    <p><strong>About Page:</strong> The page opens with video from the event, which shows the community and celebration that text can’t. As visitors scroll through the award categories, they start asking “could my work fit here?” The page ends on a call to submit a project, placed right after that moment of inspiration near the end.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cs-wrap">
+            <figure class="cs-media reveal-media">
+                <img src="img/Case2Page/userflow.png" alt="User flow showing every route through the microsite ending at the submission call to action" width="1580" height="889" loading="lazy">
+            </figure>
+            <p class="cs-caption reveal">Every path ends at the submission CTA. I mapped [the three routes] so no page is a dead end.</p>
+        </section>
+
+        <section class="cs-reflection">
+            <div class="cs-wrap cs-grid cs-grid--row">
+                <h2 class="cs-label reveal">My Reflection</h2>
+                <div class="reveal" style="--d:1">
+                    <p>The most useful critique came in Week 1: we were trying to show everything. Committing to one idea (contrast) and one colour rule made every later decision faster, from the poster to the hover states. If I had more time, I’d test the gallery filter and submit CTA with real designers. We assumed placing the CTA after inspiration would raise submissions, but we never tested it.</p>
+                    <p>I learned throughout this project that the goal was never just a good-looking archive. It was to make an Icelandic designer look at a winner’s story and think, “that could be me.”</p>
+                </div>
+            </div>
+        </section>
+
+        <nav class="cs-wrap case-nav cs-nav" aria-label="Case studies">
+            <a href="work.html" class="view-case back"><svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>All work</a>
+            <a href="about-here.html" class="view-case">Next: About Here
+                <svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>
+            </a>
+        </nav>
     </main>
 
     <script src="hamburger.js"></script>
+    <script src="case.js"></script>
 </body>
 </html>
