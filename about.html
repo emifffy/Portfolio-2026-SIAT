@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About — Emily Feng</title>
     <link href="css/site.css" rel="stylesheet">
+    <!-- Hide scroll-reveal content only when the script is there to reveal it -->
+    <script>document.documentElement.classList.add('about-js');</script>
 </head>
 <body>
     <header class="site-header site-header--sticky">
@@ -28,13 +30,49 @@
 
     <main class="about-body">
         <h1 hidden>About</h1>
-        <p class="about-lead">"It's important to think about the interconnectedness between designers and thinkers, instead of trying to find a space you can occupy yourself."</p>
 
-        <p>I'm Emily, a UI/UX designer and researcher based in Vancouver. Currently studying at SFU, majoring in Design and Interactions with specializations in copywriting, graphic design, UI/UX design, and content strategy.</p>
-        <p>My approach combines strategic thinking with empathetic design. I believe that great copy and thoughtful interfaces should feel invisible – they should simply help people accomplish their goals without friction or confusion.</p>
-        <p>In my free time, I enjoy reading and drawing, and learning about open-source design systems.</p>
+        <blockquote class="about-quote" data-reveal>
+            <span class="about-quote-mark" aria-hidden="true">&ldquo;</span>
+            <p>It's important to think about the interconnectedness between designers and thinkers, instead of trying to find a space you can occupy yourself.</p>
+            <cite>— Virgil Abloh</cite>
+        </blockquote>
 
-        <section class="experience">
+        <div class="about-grid">
+            <figure class="about-photo">
+                <div class="about-photo-pop">
+                    <button class="about-photo-card" type="button" aria-label="Poke Emily's photo to say hi">
+                        <img src="img/About/emily.webp" alt="Emily in a black hoodie and polka-dot skirt, waving from beside a red &ldquo;Caution: do not climb over rocks&rdquo; sign by the sea" width="724" height="688">
+                        <span class="about-photo-tape" aria-hidden="true"></span>
+                    </button>
+                    <div class="about-bubble">
+                        <p class="about-bubble-inner" role="status" aria-live="polite">hi there!</p>
+                    </div>
+                    <svg class="about-sparkle" viewBox="0 0 40 40" aria-hidden="true">
+                        <path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" />
+                    </svg>
+                </div>
+                <figcaption class="about-photo-caption">( poke the photo )</figcaption>
+            </figure>
+
+            <div class="about-text">
+                <p data-reveal>Hi, I'm Emily — a UI/UX designer and researcher who believes good design is
+                    <span class="doodle-circle">never made alone<svg viewBox="0 0 300 80" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M160 6 C 60 2, 6 22, 8 44 C 10 70, 120 78, 200 72 C 270 66, 298 46, 290 26 C 282 8, 220 2, 140 8" /></svg></span>.
+                    I'm based in Vancouver, currently studying Design and Interactions at SFU, with specializations in
+                    <span class="chip" style="--i:0; --r:-4deg; --bg:var(--sign-red); --fg:var(--cream)">copywriting</span>,
+                    <span class="chip" style="--i:1; --r:3deg; --bg:var(--sky)">graphic design</span>,
+                    <span class="chip" style="--i:2; --r:-2deg; --bg:var(--sand)">UI/UX design</span>, and
+                    <span class="chip" style="--i:3; --r:4deg; --bg:var(--kelp)">content strategy</span>.</p>
+
+                <p data-reveal>I like to think of myself as a <em class="about-em">translator</em> between ideas and experience:
+                    <span class="hl">part strategist, part empath</span>. The best copy and the best interfaces, to me, share one quality — they
+                    <span class="vanish">disappear</span>. They let people move through a product without ever noticing the thinking that made it feel effortless.</p>
+
+                <p data-reveal>Outside of design, you'll usually find me with a book in one hand and a sketchbook in the other, or down a rabbit hole learning about open-source design systems
+                    <span class="squiggle">(yes, for fun)<svg viewBox="0 0 200 16" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 10 Q 14 2, 26 9 T 50 9 T 74 9 T 98 9 T 122 9 T 146 9 T 170 9 T 198 8" /></svg></span>.</p>
+            </div>
+        </div>
+
+        <section class="experience" data-reveal>
             <h2>Experience</h2>
 
             <div class="experience-item expanded">
@@ -71,9 +109,17 @@
             </div>
         </section>
 
-        <p style="margin-top: 3em">Vancouver, British Columbia · emilyweiting@gmail.com</p>
+        <footer class="about-contact" data-reveal>
+            <span class="about-place">
+                <svg viewBox="0 0 24 32" aria-hidden="true"><path pathLength="1" d="M12 30 C 6 22, 3 17, 3 11 A 9 9 0 0 1 21 11 C 21 17, 18 22, 12 30 Z M12 7.5 A 3.5 3.5 0 1 0 12.01 7.5" /></svg>
+                Vancouver, BC
+            </span>
+            <span class="about-dot" aria-hidden="true">·</span>
+            <a href="mailto:emilyweiting@gmail.com" class="about-email">emilyweiting@gmail.com</a>
+        </footer>
     </main>
 
     <script src="hamburger.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>
