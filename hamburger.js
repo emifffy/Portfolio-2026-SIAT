@@ -1,9 +1,8 @@
-// Shared navigation: hamburger menu + experience accordion
+// Shared navigation: hamburger menu + scroll reveals
 document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.querySelector('.menu-toggle');
     const menuOverlay = document.querySelector('.menu-overlay');
     const menuLinks = document.querySelectorAll('.menu-link');
-    const experienceItems = document.querySelectorAll('.experience-item');
     const body = document.body;
 
     function openMenu() {
@@ -44,23 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
     menuLinks.forEach(function (link) {
         if (link.getAttribute('href') === fileName) link.setAttribute('aria-current', 'page');
         link.addEventListener('click', closeMenu);
-    });
-
-    // Experience accordion (about page)
-    experienceItems.forEach(function (item) {
-        const header = item.querySelector('.experience-header');
-        if (!header) return;
-        header.addEventListener('click', function () {
-            const isExpanded = item.classList.contains('expanded');
-            experienceItems.forEach(function (other) {
-                other.classList.remove('expanded');
-                other.querySelector('.experience-header').setAttribute('aria-expanded', 'false');
-            });
-            if (!isExpanded) {
-                item.classList.add('expanded');
-                header.setAttribute('aria-expanded', 'true');
-            }
-        });
     });
 
     // Playful scroll reveals (about + play pages): each [data-reveal] block gets .is-in once.

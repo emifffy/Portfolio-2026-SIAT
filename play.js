@@ -1,30 +1,6 @@
-// Play page: stamped-in title, section tabs, lightbox
-// (scroll reveals for [data-reveal] live in hamburger.js)
+// Play page: section tabs, lightbox
+// (scroll reveals for [data-reveal] live in hamburger.js; the title rises in with CSS)
 (function () {
-    // Title: wrap each word so it can stamp in like a sticker; <em> words stay one unit
-    const title = document.querySelector('.play-title');
-    if (title) {
-        let index = 0;
-        Array.from(title.childNodes).forEach(node => {
-            if (node.nodeType === Node.ELEMENT_NODE) {
-                node.classList.add('pw');
-                node.style.setProperty('--i', index++);
-                return;
-            }
-            const fragment = document.createDocumentFragment();
-            if (/^\s/.test(node.textContent)) fragment.append(' ');
-            node.textContent.split(/\s+/).filter(Boolean).forEach((word, i, words) => {
-                const span = document.createElement('span');
-                span.className = 'pw';
-                span.textContent = word;
-                span.style.setProperty('--i', index++);
-                fragment.append(span);
-                if (i < words.length - 1 || /\s$/.test(node.textContent)) fragment.append(' ');
-            });
-            node.replaceWith(fragment);
-        });
-    }
-
     // Tabs: highlight the section you're in
     const tabs = Array.from(document.querySelectorAll('.play-tab'));
     const sections = tabs.map(tab => document.querySelector(tab.getAttribute('href'))).filter(Boolean);

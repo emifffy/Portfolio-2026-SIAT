@@ -1793,24 +1793,6 @@ body.menu-open .site-header {
     100% { opacity: 1; transform: scale(1) rotate(-3deg); }
 }
 
-.about-sparkle {
-    position: absolute;
-    left: max(-22px, calc(-44 * var(--u)));
-    bottom: 14%;
-    width: max(34px, calc(64 * var(--u)));
-    fill: var(--sign-red);
-    animation: sparkle-in 0.8s var(--ease-pop) 1.6s both, sparkle-spin 9s linear 2.4s infinite;
-}
-
-@keyframes sparkle-in {
-    from { opacity: 0; transform: scale(0) rotate(-90deg); }
-    to { opacity: 1; transform: scale(1) rotate(0deg); }
-}
-
-@keyframes sparkle-spin {
-    to { transform: rotate(360deg); }
-}
-
 .about-photo-caption {
     margin-top: calc(34 * var(--u));
     text-align: center;
@@ -1897,32 +1879,9 @@ body.menu-open .site-header {
     pointer-events: none;
 }
 
-/* Sticker chips */
-.chip {
-    display: inline-block;
-    padding: 0 0.5em 0.08em;
-    border: 1.5px solid var(--charcoal);
-    border-radius: 999px;
-    line-height: 1.3;
-    white-space: nowrap;
-    color: var(--fg, var(--charcoal));
-    background: var(--bg, var(--sky));
-    transform: rotate(var(--r, 0deg));
-    transition: transform 0.45s var(--ease-pop);
-}
-
-.js .chip {
-    transform: scale(0) rotate(calc(var(--r, 0deg) * 6));
-    transition: transform 0.6s var(--ease-pop) calc(0.5s + var(--i, 0) * 0.12s);
-}
-
-.is-in .chip {
-    transform: rotate(var(--r, 0deg));
-}
-
-.is-in .chip:hover {
-    transform: scale(1.1) rotate(calc(var(--r, 0deg) * -1.5));
-    transition-delay: 0s;
+/* Specializations */
+.about-text strong {
+    font-weight: 500;
 }
 
 /* Italic accent + marker highlight */
@@ -1933,7 +1892,10 @@ body.menu-open .site-header {
 }
 
 .hl {
-    background-image: linear-gradient(transparent 58%, var(--sand) 58%, var(--sand) 92%, transparent 92%);
+    padding: 0.04em 0.18em;
+    margin: 0 -0.08em;
+    border-radius: 0.2em;
+    background-image: linear-gradient(var(--sand), var(--sand));
     background-repeat: no-repeat;
     background-size: 100% 100%;
     -webkit-box-decoration-break: clone;
@@ -1967,84 +1929,6 @@ body.menu-open .site-header {
     transform: translateY(-0.3em);
     filter: blur(4px);
     transition-delay: calc(var(--i, 0) * 0.05s);
-}
-
-/* Experience rises in (the contact line stays put so it's never hidden) */
-.js .experience[data-reveal] {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.6s ease, transform 0.8s var(--ease-out);
-}
-
-.js .experience[data-reveal].is-in {
-    opacity: 1;
-    transform: none;
-}
-
-.experience {
-    margin-top: calc(80 * var(--u));
-    border-top: 1px solid var(--charcoal);
-}
-
-.experience h2 {
-    font-weight: 400;
-    font-size: max(15px, calc(24 * var(--u)));
-    color: var(--muted);
-    padding: 20px 0;
-}
-
-.experience-item {
-    border-bottom: 1px solid rgba(30, 30, 30, 0.2);
-}
-
-.experience-header {
-    width: 100%;
-    display: flex;
-    align-items: baseline;
-    gap: 16px;
-    padding: 20px 0;
-    text-align: left;
-}
-
-.experience-header h3 {
-    flex: 1;
-    font-weight: 400;
-    font-size: max(20px, calc(32 * var(--u)));
-}
-
-.experience-header .meta {
-    color: var(--muted);
-    font-size: max(14px, calc(20 * var(--u)));
-}
-
-.experience-header .sign {
-    width: 1em;
-    text-align: center;
-    font-size: max(20px, calc(32 * var(--u)));
-    transition: transform 0.3s var(--ease-out);
-}
-
-.experience-item.expanded .sign {
-    transform: rotate(45deg);
-}
-
-.experience-details {
-    display: grid;
-    grid-template-rows: 0fr;
-    transition: grid-template-rows 0.4s var(--ease-out);
-}
-
-.experience-details > div {
-    overflow: hidden;
-}
-
-.experience-item.expanded .experience-details {
-    grid-template-rows: 1fr;
-}
-
-.experience-details p {
-    padding-bottom: 20px;
-    color: var(--muted);
 }
 
 /* Sign-off: location + email */
@@ -2129,10 +2013,6 @@ body.menu-open .site-header {
         right: 2%;
         top: 4%;
     }
-
-    .about-sparkle {
-        left: -8px;
-    }
 }
 
 /* ---------- Play ---------- */
@@ -2147,7 +2027,7 @@ body.lightbox-open {
     overflow: hidden;
 }
 
-/* Hero: words stamp down like stickers */
+/* Hero: rises in like the case-study intros */
 .play-hero {
     position: relative;
     padding: calc(40 * var(--u)) 0 calc(72 * var(--u));
@@ -2160,7 +2040,7 @@ body.lightbox-open {
     font-size: max(17px, calc(28 * var(--u)));
     color: var(--muted);
     margin-bottom: calc(24 * var(--u));
-    animation: cue-in 0.8s var(--ease-out) 0.1s both;
+    animation: play-rise 1s var(--ease-out) 0.1s both;
 }
 
 .play-title {
@@ -2177,42 +2057,25 @@ body.lightbox-open {
     font-family: var(--font-serif);
     font-weight: 300;
     letter-spacing: 0;
-    color: var(--sign-red);
 }
 
-.play-title em:nth-of-type(2) {
-    color: var(--charcoal);
-    background-image: linear-gradient(transparent 62%, var(--sky) 62%, var(--sky) 90%, transparent 90%);
+.play-title {
+    animation: play-rise 1s var(--ease-out) 0.24s both;
 }
 
-.js .play-title .pw {
-    display: inline-block;
-    opacity: 0;
-    animation: stamp 0.6s var(--ease-pop) forwards;
-    animation-delay: calc(0.25s + var(--i, 0) * 0.08s);
-}
-
-.play-title .pw:nth-child(odd) { --tilt: -9deg; }
-.play-title .pw:nth-child(even) { --tilt: 7deg; }
-
-@keyframes stamp {
-    0% { opacity: 0; transform: scale(1.8) rotate(var(--tilt, 0deg)); }
-    55% { opacity: 1; transform: scale(0.94) rotate(calc(var(--tilt, 0deg) * -0.3)); }
-    100% { opacity: 1; transform: none; }
+/* Matches .js .reveal → .in-view on the case-study pages */
+@keyframes play-rise {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+        filter: blur(6px);
+    }
 }
 
 /* Floating doodles around the title */
 .play-doodle {
     position: absolute;
     pointer-events: none;
-}
-
-.play-doodle--star {
-    top: 4%;
-    right: 4%;
-    width: max(36px, calc(80 * var(--u)));
-    fill: var(--sign-red);
-    animation: sparkle-in 0.8s var(--ease-pop) 1.4s both, sparkle-spin 10s linear 2.2s infinite;
 }
 
 .play-doodle--loop {
@@ -2237,8 +2100,8 @@ body.lightbox-open {
 }
 
 .play-doodle--dot {
-    top: 38%;
-    right: 22%;
+    top: 40%;
+    right: 3%;
     width: max(16px, calc(30 * var(--u)));
     aspect-ratio: 1;
     border-radius: 50%;
@@ -2252,7 +2115,7 @@ body.lightbox-open {
     50% { transform: translateY(-10px); }
 }
 
-/* Sticky sticker tabs */
+/* Sticky { bracket } tabs, like the landing page */
 .play-tabs {
     position: sticky;
     top: var(--header-h);
@@ -2260,35 +2123,61 @@ body.lightbox-open {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 10px 14px;
-    padding: 16px 0;
+    gap: 6px calc(48 * var(--u));
+    padding: 14px 0;
     background: var(--cream);
+    animation: play-rise 1s var(--ease-out) 0.38s both;
 }
 
 .play-tab {
-    padding: 0.3em 0.9em 0.35em;
-    border: 1.5px solid var(--charcoal);
-    border-radius: 999px;
-    font-size: max(15px, calc(22 * var(--u)));
-    background: var(--bg, var(--sky));
-    transform: rotate(var(--r, 0deg));
-    transition: transform 0.45s var(--ease-pop), background-color 0.25s ease, color 0.25s ease;
-    animation: tab-drop 0.6s var(--ease-pop) both;
-    animation-delay: calc(1.1s + var(--i, 0) * 0.1s);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.3em;
+    padding: 4px 0;
+    font-size: max(20px, calc(36 * var(--u)));
+    line-height: 1.1;
+    white-space: nowrap;
+    color: var(--charcoal);
+    transition: transform 0.2s ease;
 }
 
-@keyframes tab-drop {
-    from { opacity: 0; transform: translateY(-30px) rotate(calc(var(--r, 0deg) * 6)); }
+.play-tab-b {
+    display: inline-block;
+    transition: transform 0.45s var(--ease-pop);
 }
 
-.play-tab:hover,
+/* Yellow underline marks the current section; it draws in on hover */
+.play-tab-word {
+    background-image: linear-gradient(var(--sand), var(--sand));
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0% 0.16em;
+    transition: background-size 0.35s var(--ease-out);
+}
+
+.play-tab:hover .play-tab-b:first-child,
+.play-tab:focus-visible .play-tab-b:first-child {
+    transform: translateX(-0.2em);
+}
+
+.play-tab:hover .play-tab-b:last-child,
+.play-tab:focus-visible .play-tab-b:last-child {
+    transform: translateX(0.2em);
+}
+
+.play-tab:hover .play-tab-word,
+.play-tab:focus-visible .play-tab-word,
+.play-tab.is-current .play-tab-word {
+    background-size: 100% 0.16em;
+}
+
+.play-tab:active {
+    transform: scale(0.96);
+}
+
 .play-tab:focus-visible {
-    transform: translateY(-3px) scale(1.06) rotate(calc(var(--r, 0deg) * -1));
-}
-
-.play-tab.is-current {
-    background: var(--charcoal);
-    color: var(--cream);
+    outline: 2px solid var(--charcoal);
+    outline-offset: 4px;
 }
 
 .play-tabs-hint {
@@ -2298,7 +2187,6 @@ body.lightbox-open {
     font-weight: 300;
     font-size: max(15px, calc(22 * var(--u)));
     color: var(--muted);
-    animation: cue-in 0.8s var(--ease-out) 1.6s both;
 }
 
 /* Sections */
@@ -2314,18 +2202,6 @@ body.lightbox-open {
     gap: 8px calc(28 * var(--u));
     padding-bottom: calc(28 * var(--u));
     border-bottom: 1px solid var(--charcoal);
-}
-
-.play-num {
-    display: inline-grid;
-    place-items: center;
-    width: max(40px, calc(64 * var(--u)));
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: var(--sign-red);
-    color: var(--cream);
-    font-size: max(14px, calc(20 * var(--u)));
-    transform: rotate(-10deg);
 }
 
 .play-section-head h2 {
@@ -2360,14 +2236,6 @@ body.lightbox-open {
 .js .play-body .play-outro[data-reveal].is-in {
     opacity: 1;
     transform: none;
-}
-
-.js .play-section-head:not(.is-in) .play-num {
-    transform: scale(0) rotate(-120deg);
-}
-
-.play-section-head .play-num {
-    transition: transform 0.7s var(--ease-pop) 0.3s;
 }
 
 /* Projects */
@@ -2857,6 +2725,14 @@ body.lightbox-open {
         display: none;
     }
 
+    .play-tabs {
+        gap: 6px 16px;
+    }
+
+    .play-tab {
+        font-size: 18px;
+    }
+
     .play-project--about-here,
     .play-pair,
     .play-row {
@@ -2909,8 +2785,6 @@ body.lightbox-open {
     }
 
     .about-bubble,
-    .about-sparkle,
-    .play-doodle--star,
     .play-doodle--dot,
     .play-frame,
     .play-sketch img {
