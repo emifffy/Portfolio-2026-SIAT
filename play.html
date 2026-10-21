@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play — Emily Feng</title>
+    <link href="css/site.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="play-page">
+    <header class="site-header site-header--sticky">
+        <a href="index.html" class="logo-link" aria-label="Emily Feng — home">
+            <img src="img/LogoIcon.png" alt="" width="82" height="91">
+        </a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+    </header>
+
+    <div class="menu-overlay" id="menu">
+        <nav class="menu-nav" aria-label="Main">
+            <a href="index.html" class="menu-link" style="--i:0">{ hello }</a>
+            <a href="work.html" class="menu-link" style="--i:1">{ work }</a>
+            <a href="play.html" class="menu-link" style="--i:2">{ play }</a>
+            <a href="about.html" class="menu-link" style="--i:3">{ about }</a>
+        </nav>
+    </div>
+
+    <main class="play-body">
+        <section class="play-hero">
+            <p class="play-kicker">( side quests )</p>
+            <h1 class="play-title">A random assortment of <em>artistic</em> and <em>creative</em> endeavors.</h1>
+
+            <svg class="play-doodle play-doodle--star" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 C21 14 26 19 38 20 C26 21 21 26 20 38 C19 26 14 21 2 20 C14 19 19 14 20 2 Z" /></svg>
+            <svg class="play-doodle play-doodle--loop" viewBox="0 0 120 60" aria-hidden="true"><path pathLength="1" d="M4 40 C 20 10, 50 4, 56 26 C 62 50, 30 52, 36 30 C 42 8, 80 6, 116 30" /></svg>
+            <span class="play-doodle play-doodle--dot" aria-hidden="true"></span>
+        </section>
+
+        <nav class="play-tabs" aria-label="Sections">
+            <a href="#design" class="play-tab" style="--bg:var(--sky); --r:-3deg; --i:0">design</a>
+            <a href="#art" class="play-tab" style="--bg:var(--sand); --r:2deg; --i:1">art</a>
+            <a href="#photography" class="play-tab" style="--bg:var(--kelp); --r:-1deg; --i:2">photography</a>
+            <span class="play-tabs-hint">( click anything to look closer )</span>
+        </nav>
+
+        <!-- 01 Design -->
+        <section class="play-section" id="design" aria-labelledby="design-title">
+            <header class="play-section-head" data-reveal>
+                <span class="play-num" aria-hidden="true">01</span>
+                <h2 id="design-title">Design</h2>
+                <p class="play-aside">things with a brief</p>
+            </header>
+
+            <article class="play-project play-project--about-here">
+                <div class="play-info" data-reveal>
+                    <p class="play-meta">YouTube collaboration · 2025</p>
+                    <h3>About Here</h3>
+                    <p>Led a 3-month ethnographic study with urban exploration channel About Here on how communities engage with city planning, distilling field research and audience data into high-fidelity persona posters that streamlined production ideation.</p>
+                    <ul class="play-tags">
+                        <li>persona posters</li>
+                        <li>journey map</li>
+                        <li>zine</li>
+                    </ul>
+                </div>
+
+                <div class="play-media">
+                    <div class="play-group" data-reveal>
+                        <p class="play-label">persona posters <span aria-hidden="true">×3</span></p>
+                        <div class="play-fan">
+                            <button class="play-piece" type="button" style="--r:-6deg; --i:0" data-caption="About Here — persona poster, part 1: “Hey, I’m Edward.”">
+                                <img src="img/Play/about-here-persona-1.webp" alt="Persona poster: an illustrated urban planner arranging a model city, titled “Hey, I’m Edward.”" width="906" height="1400" loading="lazy">
+                            </button>
+                            <button class="play-piece" type="button" style="--r:2deg; --i:1" data-caption="About Here — persona poster, part 2: goals and motivations">
+                                <img src="img/Play/about-here-persona-2.webp" alt="Persona poster: Edward’s goals and motivations, with green line illustrations" width="906" height="1400" loading="lazy">
+                            </button>
+                            <button class="play-piece" type="button" style="--r:7deg; --i:2" data-caption="About Here — persona poster, part 3: frustrations and design focus">
+                                <img src="img/Play/about-here-persona-3.webp" alt="Persona poster: Edward’s frustrations and the design focus, under a speech bubble about people-first planning" width="906" height="1400" loading="lazy">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="play-row">
+                        <div class="play-group" data-reveal>
+                            <p class="play-label">user journey map</p>
+                            <button class="play-piece play-piece--taped" type="button" style="--r:-1.5deg" data-caption="About Here — “Isaac’s Day Trip” user journey map">
+                                <img src="img/Play/about-here-journey.webp" alt="Hand-drawn journey map, “Isaac’s Day Trip”, following a student from discovering the channel to exploring Vancouver with the zine" width="1400" height="941" loading="lazy">
+                            </button>
+                        </div>
+                        <div class="play-group" data-reveal>
+                            <p class="play-label">the zine</p>
+                            <button class="play-piece play-piece--taped" type="button" style="--r:3deg" data-caption="About Here — zine cover">
+                                <img src="img/Play/about-here-zine.webp" alt="About Here zine cover: a hand-drawn Vancouver skyline on a dark green background" width="941" height="1400" loading="lazy">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <div class="play-pair">
+                <article class="play-project play-project--stacked">
+                    <div class="play-info" data-reveal>
+                        <p class="play-meta">Festival assets · microsite wireframes</p>
+                        <h3>Jazzdor Festival</h3>
+                        <p>Visual assets for the Jazzdor jazz festival, from the building wrap to a wireframed microsite for its creations and archives.</p>
+                    </div>
+                    <div class="play-jazz" data-reveal>
+                        <button class="play-piece play-piece--wall" type="button" style="--r:-2deg; --i:0" data-caption="Jazzdor Festival — building wrap">
+                            <img src="img/Play/jazzdor-wall.webp" alt="Jazzdor Festival building wrap with black-and-white collage figures and bold type" width="475" height="612" loading="lazy">
+                        </button>
+                        <div class="play-browsers">
+                            <button class="play-piece play-browser" type="button" style="--r:2deg; --i:1" data-caption="Jazzdor Festival — microsite, “No tongues ‘ici’” creation page">
+                                <span class="play-browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                                <img src="img/Play/jazzdor-ici.webp" alt="Microsite page for the creation “No tongues ‘ici’”, listing performers beside a cut-out band photo" width="594" height="329" loading="lazy">
+                            </button>
+                            <button class="play-piece play-browser" type="button" style="--r:-1.5deg; --i:2" data-caption="Jazzdor Festival — microsite, archives menu">
+                                <span class="play-browser-bar" aria-hidden="true"><i></i><i></i><i></i></span>
+                                <img src="img/Play/jazzdor-archives.webp" alt="Microsite archives menu with scattered black-and-white musician photos" width="595" height="335" loading="lazy">
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="play-project play-project--stacked">
+                    <div class="play-info" data-reveal>
+                        <p class="play-meta">Poster series · Reykjavík</p>
+                        <h3>DesignMarch Posters</h3>
+                        <p>Type-led posters for exhibitions at DesignMarch (HönnunarMars), Reykjavík’s annual design festival.</p>
+                    </div>
+                    <div class="play-posters" data-reveal>
+                        <button class="play-piece play-piece--taped" type="button" style="--r:-4deg; --i:0" data-caption="Poster — “Around the Touch”, Reykjavík">
+                            <img src="img/Play/poster-around-the-touch.webp" alt="“Around the Touch” poster: huge outlined numerals 3.5.23 with yellow-ringed circular photos" width="906" height="1400" loading="lazy">
+                        </button>
+                        <button class="play-piece play-piece--taped" type="button" style="--r:3deg; --i:1" data-caption="Poster — Plastplan Studio, DesignMarch">
+                            <img src="img/Play/poster-plastplan.webp" alt="Plastplan Studio poster: giant blue letters with pink squiggle shadows around pastel recycled-plastic vessels" width="906" height="1400" loading="lazy">
+                        </button>
+                        <button class="play-piece play-piece--taped" type="button" style="--r:-2deg; --i:2" data-caption="Poster — HönnunarMars, Design March 2026">
+                            <img src="img/Play/poster-honnunarmars.webp" alt="HönnunarMars poster: speckled recycled-plastic letters set in a white grid on charcoal" width="906" height="1400" loading="lazy">
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 02 Art -->
+        <section class="play-section" id="art" aria-labelledby="art-title">
+            <header class="play-section-head" data-reveal>
+                <span class="play-num" aria-hidden="true">02</span>
+                <h2 id="art-title">Art</h2>
+                <p class="play-aside">collages &amp; doodles</p>
+            </header>
+
+            <div class="play-art">
+                <figure class="play-art-item" data-reveal>
+                    <button class="play-piece play-polaroid" type="button" style="--r:-4deg" data-caption="Collage — “Designer Emily”, IAT 102">
+                        <img src="img/Play/collage-emily.webp" alt="Mixed-media collage: a painted portrait with a paper crown and labelled paper flowers, under the words “Designer Emily”" width="510" height="538" loading="lazy">
+                        <span class="play-tape" aria-hidden="true"></span>
+                    </button>
+                    <figcaption>collage, IAT 102</figcaption>
+                </figure>
+
+                <figure class="play-art-item" data-reveal>
+                    <button class="play-piece play-sketch" type="button" style="--r:3deg" data-caption="Doodle — a cat adjusting their glasses">
+                        <img src="img/Play/cat-doodle.webp" alt="Pencil doodle of a cat pushing up a pair of round glasses" width="736" height="981" loading="lazy">
+                    </button>
+                    <figcaption>pencil doodle <span aria-hidden="true">(hover me)</span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- 03 Photography -->
+        <section class="play-section" id="photography" aria-labelledby="photo-title">
+            <header class="play-section-head" data-reveal>
+                <span class="play-num" aria-hidden="true">03</span>
+                <h2 id="photo-title">Photography</h2>
+                <p class="play-aside">the roll’s still developing</p>
+            </header>
+
+            <div class="play-film" data-reveal>
+                <div class="play-film-strip" aria-hidden="true">
+                    <span class="play-frame" style="--i:0"></span>
+                    <span class="play-frame" style="--i:1"></span>
+                    <span class="play-frame" style="--i:2"></span>
+                    <span class="play-frame" style="--i:3"></span>
+                </div>
+                <p>Photos coming soon — check back once they’re out of the darkroom.</p>
+            </div>
+        </section>
+
+        <footer class="play-outro" data-reveal>
+            <p>That’s the lot <em>(for now)</em>.</p>
+            <a href="work.html" class="play-outro-link">Looking for the case studies?
+                <svg viewBox="0 0 32 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M1 6h30M25 1l6 5-6 5"/></svg>
+            </a>
+        </footer>
+    </main>
+
+    <dialog class="lightbox" aria-label="Artwork viewer">
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" src="" alt="">
+            <figcaption class="lightbox-caption"></figcaption>
+        </figure>
+        <button class="lightbox-btn lightbox-close" type="button" aria-label="Close">×</button>
+        <button class="lightbox-btn lightbox-prev" type="button" aria-label="Previous piece">←</button>
+        <button class="lightbox-btn lightbox-next" type="button" aria-label="Next piece">→</button>
+    </dialog>
+
+    <!-- Hand-drawn "line boil" for the doodle: three wobble frames swapped on hover -->
+    <svg class="play-filters" aria-hidden="true" focusable="false">
+        <filter id="boil-1"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="1"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+        <filter id="boil-2"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+        <filter id="boil-3"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed="13"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+    </svg>
+
+    <script src="hamburger.js"></script>
+    <script src="play.js"></script>
+</body>
+</html>

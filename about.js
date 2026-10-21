@@ -1,21 +1,7 @@
-// About page: photo pop + "hi there!" bubble, scroll reveals, doodle accents
+// About page: photo pop + "hi there!" bubble, doodle accents
+// (scroll reveals for [data-reveal] live in hamburger.js)
 (function () {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    // Scroll reveals: each [data-reveal] block settles in once, then its doodles draw
-    const reveals = document.querySelectorAll('[data-reveal]');
-    if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.classList.add('is-in');
-                observer.unobserve(entry.target);
-            });
-        }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
-        reveals.forEach(el => observer.observe(el));
-    } else {
-        reveals.forEach(el => el.classList.add('is-in'));
-    }
 
     // "disappear" fades out letter by letter on hover; screen readers get the whole word
     const vanish = document.querySelector('.vanish');

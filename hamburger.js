@@ -63,6 +63,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Playful scroll reveals (about + play pages): each [data-reveal] block gets .is-in once.
+    // Tall blocks count as "in" once they fill a third of the screen, since they can't reach 20%.
+    const reveals = document.querySelectorAll('[data-reveal]');
+    if (reveals.length && 'IntersectionObserver' in window) {
+        const revealer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                const fillsScreen = entry.rootBounds && entry.intersectionRect.height >= entry.rootBounds.height * 0.33;
+                if (entry.intersectionRatio < 0.2 && !fillsScreen) return;
+                entry.target.classList.add('is-in');
+                revealer.unobserve(entry.target);
+            });
+        }, { threshold: [0, 0.1, 0.2, 0.3, 0.5], rootMargin: '0px 0px -8% 0px' });
+        reveals.forEach(function (el) { revealer.observe(el); });
+    } else {
+        reveals.forEach(function (el) { el.classList.add('is-in'); });
+    }
+
     // Fade work rows in as they scroll into view
     const rows = document.querySelectorAll('.work-row');
     if (rows.length && 'IntersectionObserver' in window) {
