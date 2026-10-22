@@ -741,6 +741,20 @@ body.menu-open .site-header {
     text-align: center;
 }
 
+/* Source citations link out to the article */
+.cs-cite {
+    text-decoration: underline;
+    text-decoration-color: var(--sand);
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.18em;
+    transition: text-decoration-color 0.2s ease;
+}
+
+.cs-cite:hover,
+.cs-cite:focus-visible {
+    text-decoration-color: currentColor;
+}
+
 /* Image left, text right (Case 1 challenge) */
 .cs-grid--feature {
     grid-template-columns: minmax(0, 598fr) minmax(0, 915fr);
