@@ -2206,7 +2206,6 @@ body.lightbox-open {
 /* Text blocks land with a little tilt, like the about page */
 .js .play-body .play-section-head[data-reveal],
 .js .play-body .play-info[data-reveal],
-.js .play-body .play-film[data-reveal],
 .js .play-body .play-outro[data-reveal] {
     opacity: 0;
     transform: translateY(48px) rotate(1.5deg);
@@ -2216,7 +2215,6 @@ body.lightbox-open {
 
 .js .play-body .play-section-head[data-reveal].is-in,
 .js .play-body .play-info[data-reveal].is-in,
-.js .play-body .play-film[data-reveal].is-in,
 .js .play-body .play-outro[data-reveal].is-in {
     opacity: 1;
     transform: none;
@@ -2521,59 +2519,17 @@ body.lightbox-open {
     height: 0;
 }
 
-/* Photography placeholder: a film strip still developing */
-.play-film {
-    margin-top: calc(90 * var(--u));
-    text-align: center;
-}
-
-.play-film-strip {
-    position: relative;
+/* Photography: a row of prints, each cropped to the same frame */
+.play-photos {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
-    max-width: calc(1100 * var(--u));
-    margin: 0 auto;
-    padding: 30px 18px;
-    background: var(--charcoal);
-    transform: rotate(-1.5deg);
+    gap: calc(48 * var(--u));
+    margin-top: calc(90 * var(--u));
 }
 
-.play-film-strip::before,
-.play-film-strip::after {
-    content: "";
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    height: 9px;
-    background: repeating-linear-gradient(90deg, var(--cream) 0 12px, transparent 12px 26px);
-    border-radius: 2px;
-}
-
-.play-film-strip::before { top: 10px; }
-.play-film-strip::after { bottom: 10px; }
-
-.play-frame {
-    aspect-ratio: 3 / 2;
-    border-radius: 3px;
-    background: linear-gradient(110deg, #3A3936 30%, #6E6A5E 50%, #3A3936 70%);
-    background-size: 260% 100%;
-    animation: develop 2.8s ease-in-out infinite;
-    animation-delay: calc(var(--i, 0) * 0.35s);
-}
-
-@keyframes develop {
-    0% { background-position: 120% 0; }
-    100% { background-position: -40% 0; }
-}
-
-.play-film p {
-    margin-top: calc(44 * var(--u));
-    font-family: var(--font-serif);
-    font-style: italic;
-    font-weight: 300;
-    font-size: max(17px, calc(28 * var(--u)));
-    color: var(--muted);
+.play-photo img {
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
 }
 
 /* Outro */
@@ -2742,8 +2698,9 @@ body.lightbox-open {
         gap: 12px;
     }
 
-    .play-film-strip {
+    .play-photos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 20px;
     }
 
     .lightbox-prev,
@@ -2768,7 +2725,6 @@ body.lightbox-open {
     }
 
     .about-bubble,
-    .play-frame,
     .play-sketch img {
         animation: none !important;
     }
