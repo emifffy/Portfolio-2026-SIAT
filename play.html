@@ -341,19 +341,72 @@
               class="play-piece play-sketch"
               type="button"
               style="--r: 3deg"
-              data-caption="Doodle — a cat adjusting their glasses"
+              data-caption="Sketch — a motorbike riding out of a wall of smoke"
             >
               <img
-                src="img/Play/cat-doodle.webp"
-                alt="Pencil doodle of a cat pushing up a pair of round glasses"
-                width="736"
-                height="981"
+                src="img/Play/sketch-motorbike-smoke.webp"
+                alt="Pencil sketch of a motorcyclist riding down an open road toward the viewer, in front of towering plumes of smoke"
+                width="937"
+                height="1400"
                 loading="lazy"
               />
             </button>
-            <figcaption>
-              pencil doodle <span aria-hidden="true">(hover me)</span>
-            </figcaption>
+            <figcaption>pencil sketch</figcaption>
+          </figure>
+
+          <figure class="play-art-item" data-reveal>
+            <button
+              class="play-piece play-polaroid"
+              type="button"
+              style="--r: -3deg"
+              data-caption="Painting — a woman asleep in the clouds above a crowded city"
+            >
+              <img
+                src="img/Play/painting-dreaming-over-the-city.webp"
+                alt="Painting of a woman lying asleep across blue mountains and clouds under a dark ink sky, above a jumble of domed buildings, trees and small figures"
+                width="1074"
+                height="1400"
+                loading="lazy"
+              />
+              <span class="play-tape" aria-hidden="true"></span>
+            </button>
+            <figcaption>dreamscape</figcaption>
+          </figure>
+
+          <figure class="play-art-item" data-reveal>
+            <button
+              class="play-piece play-piece--taped"
+              type="button"
+              style="--r: 2.5deg"
+              data-caption="Mixed media — reaching hands and a marble-like portrait"
+            >
+              <img
+                src="img/Play/painting-hands-and-statue.webp"
+                alt="Mixed-media painting: pale hands reach out of a black background toward a pink, statue-like portrait of a woman with circular cut-outs revealing newsprint and an orange sun"
+                width="1050"
+                height="1400"
+                loading="lazy"
+              />
+            </button>
+            <figcaption>mixed media portrait</figcaption>
+          </figure>
+
+          <figure class="play-art-item play-art-item--wide" data-reveal>
+            <button
+              class="play-piece play-piece--taped"
+              type="button"
+              style="--r: -1.5deg"
+              data-caption="Painting — moths resting on tree bark"
+            >
+              <img
+                src="img/Play/painting-moths-on-bark.webp"
+                alt="Painting of five pale cream moths camouflaged against dark grey, mottled tree bark"
+                width="1400"
+                height="1050"
+                loading="lazy"
+              />
+            </button>
+            <figcaption>moths on bark</figcaption>
           </figure>
         </div>
       </section>
@@ -485,37 +538,6 @@
         →
       </button>
     </dialog>
-
-    <!-- Hand-drawn "line boil" for the doodle: three wobble frames swapped on hover -->
-    <svg class="play-filters" aria-hidden="true" focusable="false">
-      <filter id="boil-1">
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.03"
-          numOctaves="2"
-          seed="1"
-        />
-        <feDisplacementMap in="SourceGraphic" scale="5" />
-      </filter>
-      <filter id="boil-2">
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.03"
-          numOctaves="2"
-          seed="7"
-        />
-        <feDisplacementMap in="SourceGraphic" scale="5" />
-      </filter>
-      <filter id="boil-3">
-        <feTurbulence
-          type="fractalNoise"
-          baseFrequency="0.03"
-          numOctaves="2"
-          seed="13"
-        />
-        <feDisplacementMap in="SourceGraphic" scale="5" />
-      </filter>
-    </svg>
 
     <script src="hamburger.js"></script>
     <script src="play.js"></script>

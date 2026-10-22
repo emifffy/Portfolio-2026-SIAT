@@ -2481,6 +2481,11 @@ body.lightbox-open {
     width: min(100%, max(260px, calc(440 * var(--u))));
 }
 
+/* Landscape pieces get extra width so they match the portrait ones in size */
+.play-art-item--wide {
+    width: min(100%, max(320px, calc(620 * var(--u))));
+}
+
 .play-art-item figcaption {
     margin-top: calc(30 * var(--u));
     text-align: center;
@@ -2513,24 +2518,6 @@ body.lightbox-open {
 
 .play-sketch img {
     mix-blend-mode: multiply;
-}
-
-/* Hand-drawn "line boil" when you hover the doodle */
-.play-sketch:hover img,
-.play-sketch:focus-visible img {
-    animation: boil 0.36s steps(1) infinite;
-}
-
-@keyframes boil {
-    0% { filter: url(#boil-1); }
-    33% { filter: url(#boil-2); }
-    66% { filter: url(#boil-3); }
-}
-
-.play-filters {
-    position: absolute;
-    width: 0;
-    height: 0;
 }
 
 /* Photography: a row of prints, each cropped to the same frame */
@@ -2738,8 +2725,7 @@ body.lightbox-open {
         transition-delay: 0s !important;
     }
 
-    .about-bubble,
-    .play-sketch img {
+    .about-bubble {
         animation: none !important;
     }
 }
