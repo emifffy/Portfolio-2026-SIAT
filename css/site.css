@@ -37,7 +37,7 @@
     /* 1 design px at a 1920px-wide artboard; scales down on smaller screens */
     --u: clamp(0.5px, calc(100vw / 1920), 1px);
 
-    --header-h: calc(144 * var(--u));
+    --header-h: calc(96 * var(--u));
     --gutter: max(16px, calc(54 * var(--u)));
 
     --font-sans: 'PP Neue Montreal', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -126,8 +126,8 @@ body.leaving .scroll-cue {
 
 .logo-link {
     display: block;
-    width: calc(58 * var(--u));
-    min-width: 34px;
+    width: calc(42 * var(--u));
+    min-width: 28px;
     transition: opacity 0.25s ease;
 }
 
@@ -145,8 +145,8 @@ body.leaving .scroll-cue {
 
 .menu-toggle {
     position: relative;
-    width: calc(30 * var(--u));
-    min-width: 24px;
+    width: calc(26 * var(--u));
+    min-width: 22px;
     aspect-ratio: 42 / 30;
     transition: opacity 0.25s ease;
 }
