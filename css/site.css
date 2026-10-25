@@ -2624,6 +2624,10 @@ body.lightbox-open {
     color: var(--cream);
 }
 
+.lightbox-caption:empty {
+    display: none;
+}
+
 .lightbox.is-flipping .lightbox-figure {
     animation: lightbox-pop 0.5s var(--ease-pop);
 }
